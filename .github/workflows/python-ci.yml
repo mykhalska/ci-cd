@@ -11,7 +11,7 @@ jobs:
 
     steps:
     - name: Checkout code
-      run: git clone https://github.com/devops-fundamentals-templates/dofd-05-python-mykhalska .
+      run: git clone https://github.com/mykhalska/test-repo .
 
     - name: Install dependencies
       run: |
@@ -31,11 +31,10 @@ jobs:
 
     steps:
     - name: Checkout code
-      run: git clone https://github.com/devops-fundamentals-templates/dofd-05-python-mykhalska .
+      run: git clone https://github.com/mykhalska/test-repo .
 
     - name: Install dependencies
-      run: https://github.com/devops-fundamentals-templates/dofd-05-python-mykhalska .
-        # Install any necessary software or dependencies
+      run: https://github.com/mykhalska/test-repo .
 
     - name: Build project
       run: |
