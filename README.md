@@ -137,5 +137,6 @@ Example response:
 }
 ```
 
+[![CI](https://github.com/devops-fundamentals-templates/dofd-05-python-mykhalska/actions/workflows/python-ci.yml/badge.svg?branch=main&event=push)](https://github.com/devops-fundamentals-templates/dofd-05-python-mykhalska/actions/workflows/python-ci.yml)
 
 
