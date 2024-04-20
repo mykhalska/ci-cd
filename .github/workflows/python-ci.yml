@@ -1,20 +1,70 @@
-name: GitHub Actions Demo
-run-name: ${{ github.actor }} is testing out GitHub Actions
+name: CI
+
 on:
   push:
-  workflow_dispatch:
+    branches:
+      - main  # Replace 'main' with your default branch name
+
 jobs:
-  Explore-GitHub-Actions:
-    runs-on: ubuntu-latest
+  build:
+    runs-on: ubuntu-latest  # You can choose other operating systems as needed
+
     steps:
-      - run: echo "The job was automatically triggered by a ${{ github.event_name }} event."
-      - run: echo "This job is now running on a ${{ runner.os }} server hosted by GitHub!"
-      - run: echo "The name of your branch is ${{ github.ref }} and your repository is ${{ github.repository }}."
-      - name: Check out repository code
-        uses: actions/checkout@v3
-      - run: echo "The ${{ github.repository }} repository has been cloned to the runner."
-      - run: echo "The workflow is now ready to test your code on the runner."
-      - name: List files in the repository
-        run: |
-          ls ${{ github.workspace }}
-      - run: echo "This job's status is ${{ job.status }}."
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Install dependencies
+      run: |
+        # Install any necessary software or dependencies
+        # Example commands:
+        # apt-get install <package-name>
+        # npm install
+        # pip install -r requirements.txt
+
+    - name: Build project
+      run: |
+        # Execute any build commands necessary
+        # Example commands:
+        # make build
+        # mvn compile
+        # dotnet build
+
+    - name: Run unit tests
+      run: |
+        # Execute unit tests
+        # Example commands:
+        # pytest
+        # npm test
+        # mvn test
+
+  manual-trigger:
+    runs-on: ubuntu-latest
+    if: github.event_name == 'workflow_dispatch'
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Install dependencies
+      run: |
+        # Install any necessary software or dependencies
+        # Example commands:
+        # apt-get install <package-name>
+        # npm install
+        # pip install -r requirements.txt
+
+    - name: Build project
+      run: |
+        # Execute any build commands necessary
+        # Example commands:
+        # make build
+        # mvn compile
+        # dotnet build
+
+    - name: Run unit tests
+      run: |
+        # Execute unit tests
+        # Example commands:
+        # pytest
+        # npm test
+        # mvn test
