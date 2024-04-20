@@ -3,39 +3,27 @@ name: CI
 on:
   push:
     branches:
-      - main  # Replace 'main' with your default branch name
+      - main
 
 jobs:
   build:
-    runs-on: ubuntu-latest  # You can choose other operating systems as needed
+    runs-on: ubuntu-latest
 
     steps:
     - name: Checkout code
-      uses: actions/checkout@v2
+      run: git clone https://github.com/YOUR_USERNAME/YOUR_REPOSITORY.git .
 
     - name: Install dependencies
       run: |
         # Install any necessary software or dependencies
-        # Example commands:
-        # apt-get install <package-name>
-        # npm install
-        # pip install -r requirements.txt
 
     - name: Build project
       run: |
         # Execute any build commands necessary
-        # Example commands:
-        # make build
-        # mvn compile
-        # dotnet build
 
     - name: Run unit tests
       run: |
         # Execute unit tests
-        # Example commands:
-        # pytest
-        # npm test
-        # mvn test
 
   manual-trigger:
     runs-on: ubuntu-latest
@@ -43,28 +31,16 @@ jobs:
 
     steps:
     - name: Checkout code
-      uses: actions/checkout@v2
+      run: git clone https://github.com/YOUR_USERNAME/YOUR_REPOSITORY.git .
 
     - name: Install dependencies
       run: |
         # Install any necessary software or dependencies
-        # Example commands:
-        # apt-get install <package-name>
-        # npm install
-        # pip install -r requirements.txt
 
     - name: Build project
       run: |
         # Execute any build commands necessary
-        # Example commands:
-        # make build
-        # mvn compile
-        # dotnet build
 
     - name: Run unit tests
       run: |
         # Execute unit tests
-        # Example commands:
-        # pytest
-        # npm test
-        # mvn test
