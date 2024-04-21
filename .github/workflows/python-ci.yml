@@ -14,8 +14,11 @@ jobs:
     - name: Checkout code
       run: git clone https://github.com/mykhalska/test-repo .
 
-    - name: enter the directory
-      run: cd ~/
+    - name: Show directory
+      run: 'pwd'
+
+    - name: List files
+      run: 'ls -al'
     
     - name: Install dependencies
       run: pip install -r requirements.txt
