@@ -14,6 +14,9 @@ jobs:
     - name: Checkout code
       run: git clone https://github.com/mykhalska/test-repo .
 
+    - name: Enter the dirictory
+      run: cd dofd-05-python-mykhalska
+      
     - name: Install dependencies
       run: pip install -r requirements.txt
 
