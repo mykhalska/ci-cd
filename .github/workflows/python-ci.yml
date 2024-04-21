@@ -13,12 +13,9 @@ jobs:
     steps:
     - name: Checkout code
       run: git clone https://github.com/mykhalska/test-repo .
-
-    - name: Enter the dirictory
-      run: cd dofd-05-python-mykhalska
       
     - name: Install dependencies
-      run: pip install -r requirements.txt
+      run: python3 -m pip install -r requirements.txt
 
     - name: Build project
       run: python app.py --host 192.168.56.101 --port 5000
