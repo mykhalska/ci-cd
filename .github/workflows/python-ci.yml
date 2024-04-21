@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - main
+  workflow_dispatch:
 
 jobs:
   build:
@@ -14,32 +15,29 @@ jobs:
       run: git clone https://github.com/mykhalska/test-repo .
 
     - name: Install dependencies
-      run: |
-        # Install any necessary software or dependencies
+      run: npm install
 
     - name: Build project
-      run: |
-        # Execute any build commands necessary
+      run: npm build
 
-    - name: Run unit tests
-      run: |
-        # Execute unit tests
+    - name: Run tests
+      run: echo 'test to be added'
 
-  manual-trigger:
-    runs-on: ubuntu-latest
-    if: github.event_name == 'workflow_dispatch'
+  # manual-trigger:
+  #   runs-on: ubuntu-latest
+  #   if: github.event_name == 'workflow_dispatch'
 
-    steps:
-    - name: Checkout code
-      run: git clone https://github.com/mykhalska/test-repo .
+  #   steps:
+  #   - name: Checkout code
+  #     run: git clone https://github.com/mykhalska/test-repo .
 
-    - name: Install dependencies
-      run: https://github.com/mykhalska/test-repo .
+  #   - name: Install dependencies
+  #     run: https://github.com/mykhalska/test-repo .
 
-    - name: Build project
-      run: |
-        # Execute any build commands necessary
+  #   - name: Build project
+  #     run: |
+  #       # Execute any build commands necessary
 
-    - name: Run unit tests
-      run: |
-        # Execute unit tests
+  #   - name: Run unit tests
+  #     run: |
+  #       # Execute unit tests
