@@ -20,6 +20,9 @@ jobs:
     - name: Install dependencies
       run: 'pip freeze > requirements.txt'
 
+    - name: Enter home directory
+      run: 'cd /'
+
     - name: Show directory
       run: 'pwd'
 
