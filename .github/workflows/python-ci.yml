@@ -20,14 +20,8 @@ jobs:
     - name: Show path
       run: 'realpath -s app.py'
       
-    - name: enter the right path
-      run: 'cd /home/runner/work/dofd-05-python-mykhalska/dofd-05-python-mykhalska'
-
-    - name: check current directory
-      run: 'pwd'
-
     - name: Build project
-      run: 'python3 app.py --host 192.168.56.101 --port 5000'
+      run: 'python3 /home/runner/work/dofd-05-python-mykhalska/dofd-05-python-mykhalska/app.py --host 192.168.56.101 --port 5000'
 
     - name: Run tests
       run: echo 'test to be added'
