@@ -24,7 +24,7 @@ jobs:
       run: 'pwd'
       
     - name: Enter home directory
-      run: 'cd /'
+      run: 'cd ..'
 
     - name: Show directory
       run: 'pwd'
