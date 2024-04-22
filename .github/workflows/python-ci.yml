@@ -14,14 +14,14 @@ jobs:
     - name: Checkout code
       run: git clone https://github.com/mykhalska/test-repo .
 
-    - name: Show directory
-      run: 'pwd'
+    # - name: Show directory
+    #   run: 'pwd'
 
-    - name: List files
-      run: 'ls'
+    # - name: List files
+    #   run: 'ls'
     
     - name: Install dependencies
-      run: pip install -r requirements.txt
+      run: 'pip install -r requirements.txt'
 
     - name: Build project
       run: python app.py --host 192.168.56.101 --port 5000
