@@ -24,7 +24,7 @@ jobs:
       run: 'pip freeze > requirements.txt'
 
     - name: Build project
-      run: python3 app.py --host 192.168.56.101 --port 5000
+      run: python3 dofd-05-python-mykhalska/app.py --host 192.168.56.101 --port 5000
 
     - name: Run tests
       run: echo 'test to be added'
