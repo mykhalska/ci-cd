@@ -14,17 +14,17 @@ jobs:
     - name: Checkout code
       run: git clone https://github.com/mykhalska/test-repo .
     
-    - name: Install dependencies
+    - name: Install requirements
       run: 'pip freeze > requirements.txt'
 
-    # - name: Show path
-    #   run: 'realpath -s app.py'
+    - name: Install setuptools
+      run: 'pip install setuptools'
     
     - name: test application
       run: 'python3 app.py'
       
     - name: Build project
-      run: 'python3 app.py --host 192.168.56.101 --port 5000'
+      run: 'python3 app.py --build'
 
     - name: Run tests
       run: echo 'test to be added'
