@@ -2,5 +2,5 @@ name: 'Checkout'
 description: 'Action to checkout repository contents'
 author: 'mykhalska'
 runs:
-  using: 'node12'
-  main: 'dist/index.js'
+  using: 'docker'
+  main: 'Dockerfile'
