@@ -4,3 +4,6 @@ author: 'mykhalska'
 runs:
   using: 'docker'
   main: 'Dockerfile'
+    args:
+    - ${{ inputs.input1 }}
+    - ${{ inputs.input2 }}
