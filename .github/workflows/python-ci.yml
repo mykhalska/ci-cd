@@ -35,13 +35,13 @@ jobs:
       run: 'touch __init__.py'
       
     - name: wheel
-      run: 'python ./app.py bdist_wheel'
+      run: 'python app.py bdist_wheel'
       
     - name: Build project
-      run: 'python ./app.py sdist'
+      run: 'python app.py sdist'
 
     - name: Build project 2
-      run: 'python ./app.py bdist_wheel sdist'
+      run: 'python app.py bdist_wheel sdist'
 
     - name: Run tests
       run: echo 'test to be added'
