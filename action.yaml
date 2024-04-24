@@ -1,21 +1,6 @@
-name: 'My Custom Action'
-description: 'A custom GitHub Action for performing a specific task.'
-author: 'Your Name or Organization'
-inputs:
-  input1:
-    description: 'Description of input1'
-    required: true
-    default: 'Default value for input1'
-  input2:
-    description: 'Description of input2'
-    required: false
-    default: 'Default value for input2'
-outputs:
-  output1:
-    description: 'Description of output1'
+name: 'Checkout'
+description: 'Action to checkout repository contents'
+author: 'mykhalska'
 runs:
-  using: 'docker'
-  image: 'Dockerfile'
-  args:
-    - ${{ inputs.input1 }}
-    - ${{ inputs.input2 }}
+  using: 'node12'
+  main: 'dist/index.js'
