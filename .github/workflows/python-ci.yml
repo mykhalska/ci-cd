@@ -13,35 +13,12 @@ jobs:
     steps:
     - name: Checkout code
       run: git clone https://github.com/mykhalska/test-repo .
-
-    # - name: create Dockerfile
-    #   run: nano Dockerfile 'FROM python:3.10
-    #     WORKDIR /app
-    #     COPY requirements.txt /app/requirements.txt
-    #     RUN pip install -r requirements.txt
-    #     COPY . /app
-    #     CMD pwd && ls -l && python ./app.py runserver 0.0.0.0:8000'
     
     - name: Install requirements
       run: 'pip freeze > requirements.txt'
 
-    - name: Install setuptools
-      run: 'pip install setuptools'
-      
-    - name: Install wheel package
-      run: 'pip install wheel'
-
-    - name: create init
-      run: 'touch __init__.py'
-      
-    - name: wheel
-      run: 'python app.py bdist_wheel'
-      
     - name: Build project
-      run: 'python app.py sdist'
-
-    - name: Build project 2
-      run: 'python app.py bdist_wheel sdist'
+      run: 'docker compose up -build
 
     - name: Run tests
       run: echo 'test to be added'
