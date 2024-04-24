@@ -1,9 +1,0 @@
-name: 'Checkout'
-description: 'Action to checkout repository contents'
-author: 'mykhalska'
-runs:
-  using: 'docker'
-  main: 'Dockerfile'
-    args:
-    - ${{ inputs.input1 }}
-    - ${{ inputs.input2 }}
