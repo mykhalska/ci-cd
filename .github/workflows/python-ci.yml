@@ -14,13 +14,13 @@ jobs:
     - name: Checkout code
       run: git clone https://github.com/mykhalska/test-repo .
 
-    - name: create Dockerfile
-      run: nano Dockerfile 'FROM python:3.10
-        WORKDIR /app
-        COPY requirements.txt /app/requirements.txt
-        RUN pip install -r requirements.txt
-        COPY . /app
-        CMD pwd && ls -l && python ./app.py runserver 0.0.0.0:8000'
+    # - name: create Dockerfile
+    #   run: nano Dockerfile 'FROM python:3.10
+    #     WORKDIR /app
+    #     COPY requirements.txt /app/requirements.txt
+    #     RUN pip install -r requirements.txt
+    #     COPY . /app
+    #     CMD pwd && ls -l && python ./app.py runserver 0.0.0.0:8000'
     
     - name: Install requirements
       run: 'pip freeze > requirements.txt'
