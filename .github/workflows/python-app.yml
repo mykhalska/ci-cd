@@ -24,7 +24,7 @@ jobs:
         python -m pip install --upgrade pip
         pip install -r requirements.txt
         
-    - name: Build with Docker:
+    - name: Build with Docker
       run: 'docker compose up --build'
         
     - name: Run unit tests
