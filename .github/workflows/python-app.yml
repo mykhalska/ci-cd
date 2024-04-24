@@ -18,8 +18,8 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout code 
-      uses: devops-fundamentals-templates/dofd-05-python-mykhalska@main
+    # - name: Checkout code 
+    #   uses: 
       
     # - name: Set up Python 3.10
     #   uses: actions/setup-python@v3
