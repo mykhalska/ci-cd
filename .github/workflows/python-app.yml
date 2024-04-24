@@ -12,10 +12,10 @@ jobs:
     
     steps:
     - name: Checkout code
-      uses: devops-fundamentals-templates/dofd-05-python-mykhalska/checkout@main
+      uses: devops-fundamentals-templates/dofd-05-python-mykhalska/@main
       
     # - name: Set up Python
-    #   uses: devops-fundamentals-templates/dofd-05-python-mykhalska/setup-python@main
+    #   uses: devops-fundamentals-templates/dofd-05-python-mykhalska/@main
     #   with:
     #     python-version: '3.10' 
         
