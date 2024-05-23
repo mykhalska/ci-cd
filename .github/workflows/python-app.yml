@@ -42,7 +42,7 @@ jobs:
       run: echo 'python app.py --host localhost --port 5000'
 
     - name: Build app
-      run: echo 'python -m build --sdist'
+      run: 'app.run(host=args.host, port=args.port, debug=False)'
       
     # - name: Lint with flake8
     #   run: |
