@@ -35,8 +35,8 @@ jobs:
     - name: Install build
       run: 'python -m pip install build'
 
-    - name: Enter directory
-      run: 'cd /workspaces/dofd-05-python-mykhalska/'
+    # - name: Enter directory
+    #   run: 'cd /workspaces/dofd-05-python-mykhalska/'
 
     - name: Run application
       run: 'python app.py --host localhost --port 5000'
