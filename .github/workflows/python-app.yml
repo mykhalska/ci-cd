@@ -35,14 +35,14 @@ jobs:
     - name: Install build
       run: 'python -m pip install build'
 
-    # - name: Enter directory
-    #   run: 'cd /workspaces/dofd-05-python-mykhalska/'
+    - name: Enter directory
+      run: 'cd /app'
 
     - name: Run application
-      run: echo 'python app.py --host localhost --port 5000'
+      run: 'python app.py --host localhost --port 5000'
 
-    - name: Build app
-      run: 'app.run(host=args.host, port=args.port, debug=False)'
+    # - name: Build app
+    #   run: 'app.run(host=args.host, port=args.port, debug=False)'
       
     # - name: Lint with flake8
     #   run: |
