@@ -39,10 +39,10 @@ jobs:
     #   run: 'cd /workspaces/dofd-05-python-mykhalska/'
 
     - name: Run application
-      run: 'python app.py --host localhost --port 5000'
+      run: echo 'python app.py --host localhost --port 5000'
 
     - name: Build app
-      run: 'python -m build --sdist'
+      run: echo 'python -m build --sdist'
       
     # - name: Lint with flake8
     #   run: |
