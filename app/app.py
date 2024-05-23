@@ -90,4 +90,4 @@ if __name__ == "__main__":
     parser.add_argument('--port', help='add default data', default=5000, type=int)
     args = parser.parse_args()
     print(args.host, args.port)
-    app.run(host=args.host, port=args.port, debug=True)
+    app.run(host=args.host, port=args.port, debug=False)
